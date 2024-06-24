@@ -1,0 +1,14 @@
+//Use this as a guide, can find the same code in SessionMenu.jsx file
+
+let adminData;
+  let userData;
+  if (isAdminLoggedIn) {
+    adminData = JSON.parse(window.localStorage.getItem("admin"));
+  } else if (isEmployeeLoggedIn) {
+    userData = JSON.parse(window.localStorage.getItem("employee"));
+  }
+
+  {isAdminLoggedIn 
+    ? adminData.tokens.accessToken 
+    : userData.tokens.accessToken}
+  
